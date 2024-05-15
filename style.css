@@ -1,0 +1,180 @@
+/*General Styling Start*/
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins",sans-serif; 
+}
+
+h1,h2,h3,h4, .nav-link,.card-title {
+  font-family: "Lora",serif;
+}
+
+#AltSlider{
+
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  font-variation-settings:
+  "wdth" 100;
+  text-align: center;
+
+}
+
+#AboutMe {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  font-variation-settings:
+  "wdth" 100;
+  text-align: center;
+  font-size: 1rem;
+}
+
+#projecttab{
+  background-color: white !important;
+}
+
+.card-title {
+  text-align: center;
+}
+
+#gmap {
+  height: 90%;
+  width: 100%;
+}
+
+.fab {
+  font-size: 2rem;
+}
+
+
+/*General Styling End*/
+
+
+
+/* Animation Code Start */
+
+#animation{
+    background-color: #FFCC00;
+
+}
+
+@keyframes cursor {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: black;
+  }
+}
+@keyframes typing {
+  from {
+    width: 100%;
+  }
+  90%, to {
+    width: 0;
+  }
+}
+@keyframes slide {
+  33.3333333333% {
+    font-size: 3rem;
+    letter-spacing: 3px;
+  }
+  to {
+    font-size: 0;
+    letter-spacing: 0;
+  }
+}
+.typing-slider {
+  font-family: Consolas, monospace;
+  font-weight: bold;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.typing-slider p {
+  position: relative;
+  display: inline;
+  font-size: 0;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  animation: slide 15s step-start infinite;
+}
+
+.typing-slider p::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  border-left: 3px solid black;
+  background-color: #F9F3F2;
+  animation: typing 5s infinite, cursor 1s infinite;
+}
+
+.typing-slider p:nth-child(1) {
+  animation-delay: 0s;
+}
+.typing-slider p:nth-child(1)::after {
+  animation-delay: 0s;
+  animation-timing-function: steps(16), step-end;
+}
+
+.typing-slider p:nth-child(2) {
+  animation-delay: 5s;
+}
+.typing-slider p:nth-child(2)::after {
+  animation-delay: 5s;
+  animation-timing-function: steps(23), step-end;
+}
+
+.typing-slider p:nth-child(3) {
+  animation-delay: 10s;
+}
+.typing-slider p:nth-child(3)::after {
+  animation-delay: 10s;
+  animation-timing-function: steps(12), step-end;
+}
+
+/* Animation Code End */
+
+
+
+/*Video Styling Start*/
+
+#background-video {
+   width: 100vw;
+   height: 100vh;
+   object-fit: cover;
+   position: absolute;
+   left: 0;
+   right: 0;
+   top: 0;
+   bottom: 0;
+   z-index: -1;
+   opacity: .5;
+}
+
+@media (max-width: 700px) {
+   #background-video {
+      display: none;
+   } 
+   body {
+      background: url("background.mp4") no-repeat;
+      background-size: cover;
+   }
+}
+
+/*Video Styling end*/
+
+
+
+
+
+
+
